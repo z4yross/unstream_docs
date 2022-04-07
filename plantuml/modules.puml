@@ -1,0 +1,41 @@
+@startmindmap
+!theme materia-outline
+skinparam nodeBorderColor transparent
+
+*[#AliceBlue] UnStream
+**[#Orange] Sesion
+***[#CornflowerBlue] Iniciar sesion
+***[#CornflowerBlue] Cerrar sesion 
+***[#CornflowerBlue] Registrarse
+***[#CornflowerBlue] Recuperar contraseña
+**[#Orange] Stream
+***[#CornflowerBlue] Chat
+****[#CornflowerBlue] Chat privado
+****[#CornflowerBlue] Chat general
+****[#CornflowerBlue] Moderacion
+***[#CornflowerBlue] Ver stream
+***[#CornflowerBlue] Ver descripcion
+***[#CornflowerBlue] Ver estadisticas
+**[#Orange] Perfil
+***[#CornflowerBlue] Modificar perfil
+***[#CornflowerBlue] Ver perfil
+***[#CornflowerBlue] Modificar descripcion
+**[#Orange] Feed
+***[#CornflowerBlue] Ver mas vistos
+***[#CornflowerBlue] Usuarios seguidos
+****[#CornflowerBlue] Seguir Usuario
+****[#CornflowerBlue] Dejar de seguir Usuario
+****[#CornflowerBlue] Ver usuarios seguidos
+***[#CornflowerBlue] Ver categorias
+**[#Orange] Buscador
+***[#CornflowerBlue] Buscar usuario
+***[#CornflowerBlue] Buscar categoria
+**[#Orange] Notifiaciones
+***[#CornflowerBlue] Notificar de mensaje privado
+***[#CornflowerBlue] Notificar de stream iniciado
+***[#CornflowerBlue] Notificar de moderacion de chat
+***[#CornflowerBlue] Notificar de moderacion de stream
+**[#Orange] Moderacion
+***[#CornflowerBlue] Bloquear usuario
+***[#CornflowerBlue] Desbloquear usuario
+@endmindmap

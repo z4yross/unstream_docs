@@ -1,0 +1,40 @@
+@startuml
+!theme materia-outline
+skinparam componentStyle uml1
+skinparam linetype polyline
+
+skinparam interfaceBackgroundColor #white
+skinparam interfaceBorderColor #DodgerBlue
+skinparam interfaceBorderThickness 2
+
+skinparam arrowLollipopColor #White
+
+interface HLS
+interface RTMP
+
+database us_rtmpauth_db as rtmpauth_db
+folder hls_st as hls_st
+
+component STREAM {
+
+    [us_hls_ms] as hls_ms
+    [us_rtmp_ms] as rtmp_ms
+
+    rtmp_ms - hls_st
+    hls_ms - hls_st
+
+    [us_rtmpauth_ms] as rtmpauth_ms
+    
+    rtmpauth_ms - rtmpauth_db
+    rtmpauth_ms -0)- rtmp_ms
+
+    rtmp_ms -[hidden]- hls_ms
+}
+
+HLS - hls_ms
+RTMP - rtmp_ms
+
+
+HLS -[hidden]- hls_ms
+
+@enduml
