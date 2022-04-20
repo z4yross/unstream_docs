@@ -12,6 +12,9 @@ En este componente se implementaran las acciones de moderacion para registrar re
 <!-- ![us_mod_ms](/img/plantuml/us_mod_ms.jpeg) -->
 <img src="/img/plantuml/us_mod_ms.jpeg" alt="us_mod_ms" width="200"/>
 
+*__Vista de modelo de datos__*
+<img src="/img/plantuml/us_mod_db.jpeg" alt="us_mod_ms" width="200"/>
+
 ## Endpoints
 
 ### **GET** /report/{id}
