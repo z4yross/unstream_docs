@@ -8,7 +8,7 @@ sidebar_position: 3
 El microservicio de us_user_ms es el encargado de guardar toda la informacion personal del usuario que se registre en la plataforma UNSTREAM.
 
 *__Vista de componentes y conectores__*  
-![Diagrama de componentes del microservicio us_user_ms](https://www.plantuml.com/plantuml/png/DOex3a8n30Hxdy9AdpkaeQ05EeGY1vigIU7F_P4LlMvtPfevgSUQy0xhOQ9zsGV94FC0azCW4ooNvb5Iyu3xTj4VVGKVj-SheOevP8KrWxFgmKqsnvf_)   
+![Diagrama de componentes del microservicio us_user_ms](http://www.plantuml.com/plantuml/png/VSxFIWCn40RmUvvYnFCUz0bArPidM_1OPZVJtR2Jp38peVZs4bo2YFJsyNs__3cOethD71vyeKoGqKaJ3bATKw5WQoeRAcP8nKclED4HftLMgIM-28l2usr9_hyKZQIxUfKuanwvtg7d9Krh8JDu_eLGLMxlmfmssVRRFl-yEKdUf53natynGSty57e7rIxLI2_P00rQ314THpJgMnpR5iTm5OwalJSNdQbjBU5CeNyQFjvEvz0K375ePtlUxLxKuOSUgCIQ-Hi0)   
 
 
 
