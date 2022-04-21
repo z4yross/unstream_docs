@@ -5,11 +5,13 @@ skinparam interfaceBorderColor #DodgerBlue
 skinparam interfaceBorderThickness 2
 skinparam arrowLollipopColor #White
 skinparam componentStyle uml1
+
 component us_user_ms as user
 database us_user_db as db
 folder us_user_storge as storage
-interface REST
+interface REST as user_rest
+
 user -d- db
 user -d- storage
-user -u- REST
+user -u- user_rest
 @enduml

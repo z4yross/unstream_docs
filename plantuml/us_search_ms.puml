@@ -9,11 +9,11 @@ skinparam interfaceBorderThickness 2
 
 skinparam arrowLollipopColor #White
 
-component us_search_ms as a
-database us_search_db as b
-interface REST
+component us_search_ms as us_search_ms
+database us_search_db as us_search_db
+interface REST as search_rest
 
-a -d- b
-a -u- REST
+us_search_ms -d- us_search_db
+us_search_ms -u- search_rest
 
 @enduml
