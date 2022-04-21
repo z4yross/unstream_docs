@@ -21,9 +21,9 @@ El componente us_streamchat_ms está desarrollado utilizando **TypeScript** haci
 
 
 
-## Listeners
+## Endpoints
 
-### allRooms
+### **GET** /api/rooms
 
 *__Descripción__*  
 Retorna una lista de los *rooms* de stream
@@ -31,8 +31,9 @@ Retorna una lista de los *rooms* de stream
 *__Parametros__*:
 Sin parámetros
 
-*__Procedimiento__*:
-- Emite la siguiente lista
+*__Response__*:  
+STATUS: 200  
+BODY:  
 
 
     {
@@ -46,38 +47,112 @@ Sin parámetros
       "isStream": true,
     }[]
 
-### join
+### **POST** /api/rooms
+
+*__Descripción__*  
+Crea un room con el id presentado
+
+*__Parametros__*:
+Body:  
+
+    {
+      roomId: string
+    }
+
+*__Response__*:  
+STATUS: 200  
+BODY:  
+
+
+    {
+      "roomId": string,
+      "messages": {
+        "date": string,
+        "content": string,
+        "author": string,
+      }[],
+      "connections": string[],
+      "isStream": true,
+    }[]
+
+### **GET** /api/rooms/:roomId
+
+*__Descripción__*  
+Retorna el room correspondiente con el id presentado
+
+*__Parametros__*:
+Path parameters:  
+- roomId: string
+
+*__Response__*:  
+STATUS: 200  
+BODY:  
+
+
+    {
+      "roomId": string,
+      "messages": {
+        "date": string,
+        "content": string,
+        "author": string,
+      }[],
+      "connections": string[],
+      "isStream": true,
+    }
+  
+STATUS: 404
+Descripción: Room no encontrado
+
+### **POST** /api/rooms/:roomId/join
 
 *__Descripción__*  
 Conecta al usuario a un room específico
 
-*__Parametros__*:
+*__Parametros__*:  
+Path parameters:  
+- roomId: string
+Body:  
 
     {
-      "roomId": string,
       "userId": string
     }
 
-*__Procedimiento__*  
-1. Añade el usuario a la lista de conexiones del room en la base de datos
-1. Difunde un mensaje a todos los usuarios conectados al socket room dándole la bienvenida al room
-1. Conecta al socket del usuario al room
+*__Responses__*:  
+STATUS: 201  
+Descripción: Usuario añadido satisfactoriamente al room especificado  
+  
+STATUS: 400  
+BODY:  
 
-### message
+    {
+      message: 'Not all parameters are present'
+    }
+Descripción: No todos los parámetros fueron enviados, por tanto la acción no se ejecutará.
+
+### **POST** /api/rooms/:roomId/message
 
 *__Descripción__*  
 Crea un nuevo mensaje en el chat. Actualmente el microservicio solo acepta contenido de texto.
 
 *__Parametros__*:
+Path parameters:  
+- roomId: string  
+Body:  
 
     {
-      "roomId": string,
       "userId": string,
       "content": string
     }
 
-*__Procedimiento__*  
-1. Añade el mensaje a la lista de mensajes del room en la base de datos
-1. Difunde un mensaje a todos los usuarios conectados al socket room 
-1. Conecta al socket al room
+*__Responses__*:  
+STATUS: 201  
+Descripción: Mensaje añadido satisfactoriamente al room especificado  
+  
+STATUS: 400  
+BODY:  
+
+    {
+      message: 'Not all parameters are present'
+    }
+Descripción: No todos los parámetros fueron enviados, por tanto la acción no se ejecutará.
 
