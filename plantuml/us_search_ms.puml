@@ -1,0 +1,19 @@
+@startuml
+!theme materia-outline
+skinparam componentStyle uml1
+skinparam linetype polyline
+
+skinparam interfaceBackgroundColor #white
+skinparam interfaceBorderColor #DodgerBlue
+skinparam interfaceBorderThickness 2
+
+skinparam arrowLollipopColor #White
+
+component us_search_ms as a
+database us_search_db as b
+interface REST
+
+a -d- b
+a -u- REST
+
+@enduml
