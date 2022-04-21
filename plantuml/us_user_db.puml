@@ -1,0 +1,20 @@
+@startuml
+!theme materia-outline
+skinparam componentStyle uml1
+skinparam linetype polyline
+
+skinparam interfaceBackgroundColor #white
+skinparam interfaceBorderColor #DodgerBlue
+skinparam interfaceBorderThickness 2
+
+skinparam arrowLollipopColor #White
+
+entity "user" as e01 {
+
+user : id : String
+user : email : String
+user : name : String
+user : status : Boolean
+user : description : String
+}
+@enduml

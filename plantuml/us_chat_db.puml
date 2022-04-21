@@ -1,0 +1,34 @@
+@startuml
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+!theme materia-outline
+skinparam interfaceBackgroundColor #white
+skinparam interfaceBorderColor #DodgerBlue
+skinparam interfaceBorderThickness 2
+skinparam arrowLollipopColor #White
+skinparam componentStyle uml1
+
+entity "Room" as e01 {
+  *roomId : string
+  *messages: Message[]
+  *connections: Connection[]
+  *isStream: Boolean
+}
+
+entity "Message" as e02 {
+  *date: date
+  *content: string
+  *author: string
+}
+
+entity "Connection" as e03 {
+  userId: string
+}
+
+e01 ||..|{ e02
+e01 ||..|{ e03
+@enduml
