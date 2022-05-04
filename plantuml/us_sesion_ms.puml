@@ -9,11 +9,11 @@ skinparam interfaceBorderThickness 2
 
 skinparam arrowLollipopColor #White
 
-component us_sesion_ms as a
-database us_sesion_db as b
-interface REST
+component us_sesion_ms
+database us_sesion_db
+interface REST as session_rest
 
-a -d- b
-a -u- REST
+us_sesion_ms -d- us_sesion_db
+us_sesion_ms -u- session_rest
 
 @enduml

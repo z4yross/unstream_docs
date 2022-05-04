@@ -11,30 +11,51 @@ skinparam arrowLollipopColor #White
 
 interface HLS
 interface RTMP
+interface REST as auth
+interface REST as hls_rest
 
 database us_rtmpauth_db as rtmpauth_db
+database us_hlscache_db as us_hlscache_db
 folder hls_st as hls_st
 
-component STREAM {
+component us_stream {
 
-    [us_hls_ms] as hls_ms
     [us_rtmp_ms] as rtmp_ms
-
-    rtmp_ms - hls_st
+    [us_hls_ms] as hls_ms
+    
+    rtmp_ms -l- hls_st
     hls_ms - hls_st
+    hls_ms -l- us_hlscache_db
 
     [us_rtmpauth_ms] as rtmpauth_ms
     
-    rtmpauth_ms - rtmpauth_db
+    rtmpauth_ms -r- rtmpauth_db
     rtmpauth_ms -0)- rtmp_ms
 
-    rtmp_ms -[hidden]- hls_ms
+    
+    rtmp_ms -[hidden]d- hls_ms
+
+    us_hlscache_db -[hidden]u- hls_st
+    rtmpauth_db -[hidden]d- hls_st
 }
 
-HLS - hls_ms
-RTMP - rtmp_ms
+hls_ms -l- HLS
+hls_ms -l- hls_rest
+rtmp_ms -l- RTMP
+rtmpauth_ms -l- auth
 
+rtmp_ms -[hidden]d- hls_ms
+rtmpauth_ms -[hidden]d- rtmp_ms
+hls_rest -[hidden]u- hls_ms
 
-HLS -[hidden]- hls_ms
+HLS -[hidden]d- hls_rest
+auth -[hidden]d- RTMP
+RTMP -[hidden]d- HLS
+rtmp_ms -[hidden]d- hls_ms
+rtmpauth_ms -[hidden]d- rtmp_ms
+hls_rest -[hidden]u- hls_ms
 
+HLS -[hidden]d- hls_rest
+auth -[hidden]d- RTMP
+RTMP -[hidden]d- HLS
 @enduml

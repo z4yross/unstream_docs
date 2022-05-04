@@ -1,17 +1,20 @@
 @startuml
 !theme materia-outline
+skinparam componentStyle uml1
+skinparam linetype polyline
+
 skinparam interfaceBackgroundColor #white
 skinparam interfaceBorderColor #DodgerBlue
 skinparam interfaceBorderThickness 2
+
 skinparam arrowLollipopColor #White
-skinparam componentStyle uml1
 
-component us_user_ms as user
-database us_user_db as db
-folder us_user_storge as storage
-interface REST as user_rest
+entity "Users" as e01 {
 
-user -d- db
-user -d- storage
-user -u- user_rest
+
+*Uuid : Varchar
+Email : Varchar
+Status : Varchar
+Password : Varchar
+}
 @enduml

@@ -9,11 +9,12 @@ skinparam interfaceBorderThickness 2
 
 skinparam arrowLollipopColor #White
 
-component us_search_ms as us_search_ms
-database us_search_db as us_search_db
-interface REST as search_rest
+entity "user" as e01 {
 
-us_search_ms -d- us_search_db
-us_search_ms -u- search_rest
-
+user : id : String
+user : email : String
+user : name : String
+user : status : Boolean
+user : description : String
+}
 @enduml
