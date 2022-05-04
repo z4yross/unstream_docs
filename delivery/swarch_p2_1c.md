@@ -58,7 +58,7 @@ El sistema estará compuesto de 7 módulos principales:
 
 #### 2.2.1. Representación Gráfica
 
-![cc](https://www.plantuml.com/plantuml/png/VLJDQXin4BxhALHwwa7GzWb2sa8FAPJQq4C8HbbDl8lri-Y7O4hVlHun6JJk9ZqOwVkPxvDMpKsfDjSMl7fNPmYWWwsG5sjIgtw9eCffYQlDDkWfXJL5Y7LNpnxqnVDfO55SpoleDVbpTmxa4Yla9pl1hPrEnvnQT5-IJrc_VvwN2flAb1raKdrDxWZvrhStfFjvcKuHIj6VnsYRStg-IzulQrfftEyUgdY0_dwt6tQ_zZz-ZjjlkxssHTjMvmruzkMGeLIbdAtsqHRGxOBKiABXu1vHD6o5x6AUx3G3oIIYdf9ta7j2gIzPcCIVGZS4CjYW_oYbB__kAVmGoWDQQCqSZY0AbyJq7v9gumqb8KmolObvSzsPW_Z8bCPx6ScWDjc8U_gF__Z1y74sMj_FYtCG7rnloYBPJxEiYGCDmM8IIVugDHmPdykmvHSmNc1_H3oLG5mhzKPZDaYQZ_qI9Oz1fxtK4YRkXHC7XihXZq3nMDTl2soUUXjRn9vVCQFqrCL-uxyBSRsN4Wd66McMR3FIUrsqB2cAOeo-LgGWITDOJ4saMxBDIBDi4f8JDGZQx804vPEHmjb3AufblOni1J9_8yWY6m7wClmNXV5IKpu2ShYoHzZes8Kz55TO3mVncem4D3FePSbfjbLU366RDuCCJM4ltGtR1DFCwBc1w5hm_m00)
+<img src="./images/cc.png" alt="drawing"/>
 
 #### 2.2.2. Descripción de la Vista
 
@@ -205,8 +205,7 @@ Este es el modelo de datos del micro servicio us_user_ms donde el campo id es un
 ### 2.2 Vista por capas
 #### 2.2.1. Representación Gráfica
 
-<!-- ![logo](./images/modules.png) -->
-<!-- <img src="./images/modules" alt="drawing" width="200"/> -->
+<img src="./images/layers.png" alt="drawing"/>
 
 #### 2.2.2. Descripción de la Vista
 
